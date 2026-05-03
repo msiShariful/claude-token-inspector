@@ -9,8 +9,8 @@
     {
       "name": "token-inspector",
       "source": {
-        "source": "url",
-        "url": "https://github.com/msiShariful/claude-token-inspector.git"
+        "type": "github",
+        "repo": "msiShariful/claude-token-inspector"
       },
       "description": "Inspect and identify bloated context — find large files, redundant instructions, and unnecessary content consuming your token budget",
       "version": "1.0.0",
