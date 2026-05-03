@@ -5,5 +5,9 @@
   "author": {
     "name": "Shariful Islam",
     "email": "sharifulislam12570@gmail.com"
-  }
+  },
+  "homepage": "https://github.com/msishariful/claude-token-inspector",
+  "repository": "https://github.com/msishariful/claude-token-inspector",
+  "license": "MIT",
+  "keywords": ["tokens", "context", "optimization", "debugging"]
 }

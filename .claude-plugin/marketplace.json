@@ -9,24 +9,14 @@
     {
       "name": "token-inspector",
       "source": {
-        "type": "github",
-        "repo": "msiShariful/claude-token-inspector"
+        "source": "github",
+        "repo": "msishariful/claude-token-inspector"
       },
       "description": "Inspect and identify bloated context — find large files, redundant instructions, and unnecessary content consuming your token budget",
       "version": "1.0.0",
       "homepage": "https://github.com/msishariful/claude-token-inspector",
       "keywords": ["tokens", "context", "optimization", "debugging"],
-      "category": "productivity",
-      "skills": [
-        {
-          "name": "inspect-context",
-          "description": "Analyze the current context window and report a breakdown of what's consuming tokens — system prompts, files, conversation history, skills, and MCP configs. Use when the user wants to understand their token budget."
-        },
-        {
-          "name": "find-bloat",
-          "description": "Find large context items that are not relevant to the current request. Identifies files, documents, and instructions that could be removed to free up token budget. Use when context is running out or responses are being truncated."
-        }
-      ]
+      "category": "productivity"
     }
   ]
 }
