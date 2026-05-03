@@ -1,0 +1,13 @@
+{
+  "name": "token-inspector",
+  "description": "Inspect and identify bloated context — find large files, redundant instructions, and unnecessary content consuming your token budget",
+  "version": "1.0.0",
+  "author": {
+    "name": "Shariful Islam",
+    "email": "sharifulislam12570@gmail.com"
+  },
+  "homepage": "https://github.com/msishariful/claude-token-inspector",
+  "repository": "https://github.com/msishariful/claude-token-inspector",
+  "license": "MIT",
+  "keywords": ["tokens", "context", "optimization", "debugging"]
+}
