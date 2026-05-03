@@ -5,7 +5,7 @@
 **See exactly what's eating your context window — and reclaim it.**
 
 [![GitHub Stars](https://img.shields.io/github/stars/msishariful/claude-token-inspector?style=flat-square&logo=github&color=yellow)](https://github.com/msishariful/claude-token-inspector/stargazers)
-[![GitHub Downloads](https://img.shields.io/github/downloads/msishariful/claude-token-inspector/total?style=flat-square&logo=github&label=downloads&color=blue)](https://github.com/msishariful/claude-token-inspector/releases)
+[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=msiShariful.claude-token-inspector&style=flat-square&left_color=grey&right_color=blue&left_text=visitors)](https://github.com/msishariful/claude-token-inspector)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-blueviolet?style=flat-square&logo=anthropic)](https://claude.ai/code)
 [![Requires Claude Code](https://img.shields.io/badge/requires-Claude%20Code%20v1.0.33%2B-orange?style=flat-square)](https://claude.ai/code)
