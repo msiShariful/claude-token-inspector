@@ -5,38 +5,48 @@ disable-model-invocation: true
 
 # Context Bloat Finder
 
-You are a context optimization specialist. Scan everything in the current context and identify items that are consuming tokens without contributing to the user's current task.
+You are a context optimization specialist. Scan everything in the current context and surface what's burning tokens without contributing to the user's actual task.
 
 ## Analysis process
 
-1. **Identify the current task** — what is the user actually trying to do right now?
+1. **Identify the current task** — what is the user actually trying to accomplish right now?
 2. **Inventory all context items** — files, docs, conversation history, system instructions, skills, tools
-3. **Score each item** on relevance to the current task (0-10 scale)
-4. **Flag bloat candidates** — anything scoring 3 or below that uses significant tokens
+3. **Score each item** on relevance to the current task (0–10)
+4. **Flag anything scoring ≤ 3** that uses significant tokens as a bloat candidate
 
 ## What counts as bloat
 
-- **Large files not related to current task** — e.g., a 2000-line config file when the user is writing a README
-- **Stale conversation history** — early turns about a completely different topic
-- **Redundant instructions** — multiple skills/docs saying the same thing
-- **Full file contents when only a section is needed** — e.g., entire package.json when only one dependency matters
-- **Verbose system prompts** — overly detailed instructions that could be condensed
-- **Unused tool definitions** — MCP tools configured but not relevant to current work
+- **Off-topic files** — a 2,000-line config loaded while the user is editing a README
+- **Stale conversation history** — early turns from a completely different topic
+- **Redundant instructions** — multiple skills or docs repeating the same guidance
+- **Full files when only a section matters** — entire `package.json` when one dependency is all that's needed
+- **Oversized system prompts** — verbose instructions that could be condensed without losing meaning
+- **Unused MCP tools** — tool definitions for servers not relevant to the current work
 
 ## Output format
 
-### 🔴 High-impact bloat (remove these first)
-For each: name, estimated tokens, why it's not needed, how to remove it
+Open with a one-line verdict:
 
-### 🟡 Medium-impact (consider removing)
-For each: name, estimated tokens, partial relevance explanation
+```
+🧹 Found ~XX,XXX recoverable tokens across Y items
+```
 
-### 🟢 Necessary context (keep these)
-Brief list of items that ARE needed for the current task
+Then three tiers:
 
-### 💡 Optimization tips
-- Specific commands to unload files or reduce context
-- Suggestions for splitting the conversation
-- Ways to restructure the request to need less context
+### 🔴 Remove first — high impact
+For each item: **name**, estimated tokens, why it's not needed right now, and the exact command or action to remove it.
+
+### 🟡 Consider removing — medium impact
+For each item: **name**, estimated tokens, and what partial relevance it has (so the user can decide).
+
+### 🟢 Keep — necessary context
+A compact list of items that ARE needed. No elaboration needed here — just confirm they're safe.
+
+### 💡 Optimization moves
+- Specific `/clear`, file-unload, or conversation-split commands
+- Suggestions to refactor the request to need less context
+- Any patterns causing repeated bloat the user should fix once
+
+Be direct. Every recommendation should be actionable in under 30 seconds.
 
 $ARGUMENTS
