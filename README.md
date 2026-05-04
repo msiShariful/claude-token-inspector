@@ -54,14 +54,6 @@ A Claude Code plugin that gives you a complete breakdown of your context window 
 
 That's it. Both skills are live in your session.
 
-### Local development / testing
-
-```bash
-git clone https://github.com/msishariful/claude-token-inspector.git
-claude --plugin-dir ./claude-token-inspector
-```
-
-After editing any `SKILL.md`, run `/reload-plugins` to pick up changes.
 
 ---
 
