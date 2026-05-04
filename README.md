@@ -34,26 +34,51 @@ A Claude Code plugin that gives you a complete breakdown of your context window 
 
 ### Via Claude Code Marketplace (recommended)
 
-**Step 1** — Add the marketplace
+**Step 0** — Update Claude Code to the latest version
+
+```bash
+npm update -g @anthropic-ai/claude-code
+```
+
+Verify your version afterward:
+
+```bash
+claude --version
+```
+
+You need v1.0.33 or later to use this plugin.
+
+---
+
+**Step 1** — Start a Claude Code session in your terminal
+
+```bash
+claude
+```
+
+Run this from your project directory. All plugin commands below are entered inside the Claude Code session.
+
+---
+
+**Step 2** — Add the marketplace
 
 ```
 /plugin marketplace add msishariful/claude-token-inspector
 ```
 
-**Step 2** — Install the plugin
+**Step 3** — Install the plugin
 
 ```
 /plugin install token-inspector@shariful-claude-plugins
 ```
 
-**Step 3** — Activate
+**Step 4** — Activate
 
 ```
 /reload-plugins
 ```
 
 That's it. Both skills are live in your session.
-
 
 ---
 
