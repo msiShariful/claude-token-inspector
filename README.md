@@ -22,10 +22,13 @@ A Claude Code plugin that gives you a complete breakdown of your context window 
 |---|---|
 | `/token-inspector:inspect-context` | Full token breakdown across files, conversation history, skills, MCP tools, and instructions — with percentages and estimated counts |
 | `/token-inspector:find-bloat` | Identifies irrelevant context items ranked by impact, with specific commands to remove them |
+| `/token-inspector:context-health` | Instant one-liner pulse check — fill level, bloat count, and one recommended action |
+| `/token-inspector:slim-instructions` | Analyzes CLAUDE.md and instruction files for verbosity and redundancy, then produces a condensed rewrite |
 
 - 📊 **Instant visibility** — know your context budget at a glance
 - 🎯 **Relevance scoring** — each item tagged as necessary, partial, or removable
 - 💡 **Actionable output** — get exact commands, not vague advice
+- ✂️ **Instruction slimming** — cut CLAUDE.md bloat without losing any behavior
 - ⚡ **Zero config** — works out of the box after install
 
 ---
@@ -119,12 +122,53 @@ Categorizes every context item by relevance to your current task:
 
 ---
 
+### Quick health check
+
+```
+/token-inspector:context-health
+```
+
+A two-line pulse check — no tables, no interruption:
+
+```
+🟠 71% full (~142,000 / 200,000 tokens) — Context is getting crowded — 3 bloat item(s) detected
+💡 Run /token-inspector:find-bloat to identify what to remove.
+```
+
+---
+
+### Slim your CLAUDE.md
+
+```
+/token-inspector:slim-instructions
+```
+
+Analyzes all loaded instruction files (CLAUDE.md, project settings, skill definitions) and produces a condensed rewrite with zero behavior loss:
+
+```
+### `CLAUDE.md` — 2,400 tokens → 980 tokens (59% reduction)
+
+What was cut:
+- 3 rules restated Claude's defaults (removed)
+- "You should make sure to always..." pattern condensed throughout
+- Duplicate examples collapsed to one per pattern
+
+Condensed version:
+[ready-to-paste rewrite]
+
+💾 Total savings: ~1,420 tokens recovered across 1 file.
+```
+
+---
+
 ### When to use it
 
+- Run `/context-health` at the start of any long task for a quick status
 - Responses are getting truncated or feel degraded
 - You've loaded many files and aren't sure what's still needed
 - You want to understand your remaining context budget before starting a complex task
 - Claude seems to be "forgetting" earlier instructions
+- Your CLAUDE.md has grown large over time and you want to trim it
 - You're working in a long session and want to clean up before continuing
 
 ---

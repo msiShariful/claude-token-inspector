@@ -1,7 +1,7 @@
 {
   "name": "token-inspector",
   "description": "Inspect and identify bloated context — find large files, redundant instructions, and unnecessary content consuming your token budget",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Shariful Islam",
     "email": "sharifulislam12570@gmail.com"
