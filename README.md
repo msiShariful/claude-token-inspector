@@ -24,11 +24,17 @@ A Claude Code plugin that gives you a complete breakdown of your context window 
 | `/token-inspector:find-bloat` | Identifies irrelevant context items ranked by impact, with specific commands to remove them |
 | `/token-inspector:context-health` | Instant one-liner pulse check — fill level, bloat count, and one recommended action |
 | `/token-inspector:slim-instructions` | Analyzes CLAUDE.md and instruction files for verbosity and redundancy, then produces a condensed rewrite |
+| `/token-inspector:token-forecast` | Estimates token cost of a file, directory, or pasted content before you load it |
+| `/token-inspector:mcp-audit` | Shows all connected MCP servers, their token cost, and which are unused so you can disconnect them |
+| `/token-inspector:suggest-split` | Detects topic drift and recommends whether to start a new conversation, with a ready-to-paste carry-forward summary |
+| `/token-inspector:history-trim` | Identifies the exact turn to `/clear` from to prune stale history without losing relevant context |
 
 - 📊 **Instant visibility** — know your context budget at a glance
 - 🎯 **Relevance scoring** — each item tagged as necessary, partial, or removable
 - 💡 **Actionable output** — get exact commands, not vague advice
 - ✂️ **Instruction slimming** — cut CLAUDE.md bloat without losing any behavior
+- 🔌 **MCP auditing** — see which connected servers are costing tokens but going unused
+- 🔮 **Token forecasting** — know the cost before you load
 - ⚡ **Zero config** — works out of the box after install
 
 ---
@@ -169,6 +175,10 @@ Condensed version:
 - You want to understand your remaining context budget before starting a complex task
 - Claude seems to be "forgetting" earlier instructions
 - Your CLAUDE.md has grown large over time and you want to trim it
+- You want to know the token cost of a file before loading it (`/token-forecast`)
+- You have many MCP servers connected and aren't sure which ones you're actually using (`/mcp-audit`)
+- Your session has covered many different topics and feels unfocused (`/suggest-split`)
+- History has grown long but you want to keep going in the same session (`/history-trim`)
 - You're working in a long session and want to clean up before continuing
 
 ---
