@@ -1,4 +1,5 @@
 ---
+name: history-trim
 description: Analyze conversation history turn-by-turn and identify the exact point to run /clear from to prune stale history while keeping everything relevant to the current task. Use when history has grown long but you want to continue in the same session.
 disable-model-invocation: true
 ---

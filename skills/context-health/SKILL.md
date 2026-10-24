@@ -1,4 +1,5 @@
 ---
+name: context-health
 description: Quick one-liner health check of your context window. Shows usage percentage, fill level, and whether bloat is detected — without interrupting your flow. Use when you want a fast pulse check before starting a task.
 disable-model-invocation: true
 ---

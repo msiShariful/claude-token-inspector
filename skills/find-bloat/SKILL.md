@@ -1,4 +1,5 @@
 ---
+name: find-bloat
 description: Find large context items that are not relevant to the current request. Identifies files, documents, and instructions that could be removed to free up token budget. Use when context is running out or responses are being truncated.
 disable-model-invocation: true
 ---

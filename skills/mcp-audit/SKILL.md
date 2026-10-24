@@ -1,4 +1,5 @@
 ---
+name: mcp-audit
 description: Audit all connected MCP servers and their tool definitions. Shows which servers are loaded, how many tokens each costs, and which tools haven't been used — so you can disconnect what you don't need. Use when you have many MCP servers connected and want to reclaim token budget.
 disable-model-invocation: true
 ---

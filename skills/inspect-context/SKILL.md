@@ -1,4 +1,5 @@
 ---
+name: inspect-context
 description: Analyze the current context window and report a breakdown of what's consuming tokens — system prompts, files, conversation history, skills, and MCP configs. Use when the user wants to understand their token budget.
 disable-model-invocation: true
 ---

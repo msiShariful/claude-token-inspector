@@ -1,4 +1,5 @@
 ---
+name: suggest-split
 description: Detect when a conversation has drifted across multiple unrelated topics and recommend whether to start a new conversation. Identifies the optimal split point and summarizes what to carry forward. Use when a session has been running long or has covered many different tasks.
 disable-model-invocation: true
 ---

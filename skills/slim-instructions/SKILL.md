@@ -1,4 +1,5 @@
 ---
+name: slim-instructions
 description: Analyze CLAUDE.md and other loaded instruction files for verbosity, redundancy, and bloat. Produces a condensed rewrite that preserves all meaning while cutting token cost. Use when your system prompt or CLAUDE.md feels too long.
 disable-model-invocation: true
 ---

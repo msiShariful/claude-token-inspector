@@ -1,4 +1,5 @@
 ---
+name: token-forecast
 description: Estimate how many tokens a file, directory, URL, or pasted content would add to your context before you load it. Use before opening large files or reading external content to avoid blowing your context budget.
 disable-model-invocation: true
 ---
